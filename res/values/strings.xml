@@ -4796,5 +4796,10 @@
     <string name="slide_lock_delay_10m">10 minutes</string>
     <string name="slide_lock_delay_30m">30 minutes</string>
 
+    <!-- Lock screen misc. settings -->
+    <string name="lockscreen_battery_status_title">Battery status</string>
+    <string name="lockscreen_battery_status_charging">Only when charging</string>
+    <string name="lockscreen_battery_status_alwayson">Always on</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
