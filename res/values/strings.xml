@@ -4424,9 +4424,10 @@
     <string name="device_hostname">Device hostname</string>
 
     <!-- About phone screen, build date of ROM -->
-    <string name="build_date">Purity build date</string>
+    <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
-
+    <string name="rom_version_default">Purity Unknown</string>
+    <string name="rom_version">ROM version</string>
     <string name="ok">OK</string>
 
     <!-- Reset Profiles -->
@@ -4524,6 +4525,12 @@
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
     <string name="power_menu_expanded_desktop">Expanded desktop</string>
+    <string name="summary_expanded_desktop">%1$s</string>
+    <string name="expanded_desktop_summary_status_bar">With status bar</string>
+    <string name="expanded_desktop_summary_no_status_bar">Without status bar</string>
+    <string name="expanded_desktop_disabled">Off</string>
+    <string name="expanded_desktop_status_bar">With status bar</string>
+    <string name="expanded_desktop_no_status_bar">Without status bar</string>
     <string name="power_menu_profiles_title">Profile switcher</string>
     <string name="power_menu_airplane_title">Airplane mode</string>
     <string name="power_menu_silent_title">Sound panel</string>
