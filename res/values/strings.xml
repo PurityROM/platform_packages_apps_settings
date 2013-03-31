@@ -4433,8 +4433,8 @@
     <!-- Reset Profiles -->
     <string name="profile_reset_title">Reset</string>
     <string name="profile_reset_message">Delete all user created profiles and application groups and restore them to default?</string>
-
     <string name="profiles_add">Add</string>
+    <string name="profile_applist_title">Applications</string>
   	 	
     <!-- Add application dialog box title -->
     <string name="profile_choose_app">Choose application</string>
