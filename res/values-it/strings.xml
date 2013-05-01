@@ -2459,7 +2459,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
     <string name="wifi_mode">Modalità</string>
     <string name="wifi_mode_ibss">Rete Ad-Hoc (IBSS)</string>
     <string name="wifi_mode_ibss_short">Ad-Hoc</string>
-    <string name="pie_control_title">Controlli a disco</string>
+    <string name="pie_control_title">Impostazioni Pie</string>
     <string name="pie_control_enabled">\"Pie controls\": attivati quando il Desktop esteso è attivo</string>
     <string name="pie_control_disabled">\"Pie controls\": disattivati</string>
     <string name="pie_control_size">Dimensione tasti</string>
@@ -2502,4 +2502,17 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
     <string name="power_notifications_vibrate_title">Vibra</string>
     <string name="power_notifications_ringtone_title">Suono di notifica</string>
     <string name="power_notifications_ringtone_silent">Silenzioso</string>
+    <string name="user_interface_title">Interfaccia Utente</string> 
+    <string name="dual_pane_prefs_on">Sempre</string> 
+    <string name="dual_pane_prefs_off">Mai</string> 
+    <string name="dual_pane_prefs_landscape">Solo in landscape</string> 
+    <string name="dual_pane_prefs_title">Impostazioni Dual Pane</string> 
+    <string name="battery_bar">Posizione della barra</string> 
+    <string name="battery_bar_color">Colore della barra</string> 
+    <string name="battery_bar_cat">Impostazioni barra della batteria</string> 
+    <string name="battery_bar_style_title">Stile barra</string> 
+    <string name="battery_bar_thickness_title">Spessore barra</string> 
+    <string name="navigation_bar_edit_title">Impostazioni navbar</string> 
+    <string name="navigation_bar_edit_summary">Modifica il layout della navbar</string> 
+    <string name="navigation_bar_height">Altezza navbar</string> 
 </resources>
