@@ -348,4 +348,10 @@
     <item>Singapore</item>
     <item>Brasile</item>
   </string-array>
+
+  <string-array name="clock_style_entries"> 
+    <item>Orologio a destra</item> 
+    <item>Orologio al centro</item> 
+    <item>Non mostrare</item> 
+  </string-array> 
 </resources>
