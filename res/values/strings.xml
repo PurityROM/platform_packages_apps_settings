@@ -4635,6 +4635,10 @@
     <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
     <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
 
+    <!--- Launch music on app connect -->
+  <string name="headset_category_title">Headset</string>
+  <string name="headset_connect_player_title">Launch music app on connect</string>
+
     <!-- Quick settings panel  -->
     <string name="quick_settings_panel_title">Quick Settings panel</string>
     <string name="quick_settings_title">Quick Settings</string>

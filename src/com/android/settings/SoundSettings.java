@@ -85,6 +85,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
     private static final String KEY_CONVERT_SOUND_TO_VIBRATE = "notification_convert_sound_to_vibration";
+  private static final String KEY_HEADSET_CONNECT_PLAYER = "headset_connect_player";
 
     private static final String SILENT_MODE_OFF = "off";
     private static final String SILENT_MODE_VIBRATE = "vibrate";
@@ -111,6 +112,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Preference mRingtonePreference;
     private Preference mNotificationPreference;
     private PreferenceScreen mQuietHours;
+    private CheckBoxPreference mHeadsetConnectPlayer;
 
     private Runnable mRingtoneLookupRunnable;
 
@@ -222,6 +224,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
+
+        mHeadsetConnectPlayer = (CheckBoxPreference) findPreference(KEY_HEADSET_CONNECT_PLAYER);
+        mHeadsetConnectPlayer.setChecked(Settings.System.getInt(resolver,
+                Settings.System.HEADSET_CONNECT_PLAYER, 0) != 0);
 
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (vibrator == null || !vibrator.hasVibrator()) {
@@ -402,6 +408,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mConvertSoundToVibration) {
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_CONVERT_SOUND_TO_VIBRATION,
                     mConvertSoundToVibration.isChecked() ? 1 : 0);
+
+        } else if (preference == mHeadsetConnectPlayer) {
+            Settings.System.putInt(getContentResolver(), Settings.System.HEADSET_CONNECT_PLAYER,
+                    mHeadsetConnectPlayer.isChecked() ? 1 : 0);
 
         } else if (preference == mMusicFx) {
             // let the framework fire off the intent
