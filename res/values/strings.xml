@@ -4892,4 +4892,10 @@
     <string name="navigation_button_glow_time_title">Navigation button glow time</string> 
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    
+    <string name="status_bar_quick_settings_auto_default_title">Quick Settings Panel Auto Default</string>
+    <string name="status_bar_quick_settings_auto_default_summary">Automatically display quick settings panel when there are no notification icons</string>
+    
+    <string name="recents_tasks_display_limit">Recents panel tasks display limit</string>
+    
 </resources>

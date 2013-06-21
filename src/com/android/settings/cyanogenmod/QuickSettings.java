@@ -74,6 +74,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     private static final String DYNAMIC_WIFI = "dynamic_wifi";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String COLLAPSE_PANEL = "collapse_panel";
+    private static final String AUTO_DEFAULT = "auto_default";
     private static final String GENERAL_SETTINGS = "pref_general_settings";
     private static final String STATIC_TILES = "static_tiles";
     private static final String DYNAMIC_TILES = "pref_dynamic_tiles";
@@ -87,6 +88,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
     CheckBoxPreference mDynamicIme;
     CheckBoxPreference mDynamicUsbTether;
     CheckBoxPreference mCollapsePanel;
+    CheckBoxPreference mQuickSettingsAutoDefault;
     ListPreference mQuickPulldown;
     PreferenceCategory mGeneralSettings;
     PreferenceCategory mStaticTiles;
@@ -121,6 +123,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
 
         mCollapsePanel = (CheckBoxPreference) prefSet.findPreference(COLLAPSE_PANEL);
         mCollapsePanel.setChecked(Settings.System.getInt(resolver, Settings.System.QS_COLLAPSE_PANEL, 0) == 1);
+        
+        mQuickSettingsAutoDefault = (CheckBoxPreference) prefSet.findPreference(AUTO_DEFAULT);
+        mQuickSettingsAutoDefault.setChecked(Settings.System.getInt(resolver, Settings.System.QS_AUTO_DEFAULT, 0) == 1);
 
         // Add the sound mode
         mRingMode = (MultiSelectListPreference) prefSet.findPreference(EXP_RING_MODE);
@@ -262,6 +267,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         } else if (preference == mCollapsePanel) {
             Settings.System.putInt(resolver, Settings.System.QS_COLLAPSE_PANEL,
                     mCollapsePanel.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mQuickSettingsAutoDefault) {
+            Settings.System.putInt(resolver, Settings.System.QS_AUTO_DEFAULT,
+                    mQuickSettingsAutoDefault.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

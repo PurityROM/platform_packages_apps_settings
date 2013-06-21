@@ -28,6 +28,11 @@
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false" />
+            
+        <CheckBoxPreference
+            android:key="auto_default"
+            android:title="@string/status_bar_quick_settings_auto_default_title"
+            android:summary="@string/status_bar_quick_settings_auto_default_summary" />
 
         <CheckBoxPreference
             android:key="collapse_panel"

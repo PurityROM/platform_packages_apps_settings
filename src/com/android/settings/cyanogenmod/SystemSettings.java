@@ -17,6 +17,7 @@
 package com.android.settings.cyanogenmod;
 
 import android.content.Context;
+import android.preference.CheckBoxPreference;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
@@ -37,8 +38,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
     private static final String KEY_NAV_BUTTONS_EDIT = "nav_buttons_edit";
     private static final String KEY_NAV_BUTTONS_HEIGHT = "nav_buttons_height";
+    private static final String RECENTS_TASKS_LIMIT = "recents_tasks_limit";
 
     private ListPreference mNavButtonsHeight;
+    private CheckBoxPreference mRecentsTasksLimit;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
         mNavButtonsHeight = (ListPreference) findPreference(KEY_NAV_BUTTONS_HEIGHT);
         mNavButtonsHeight.setOnPreferenceChangeListener(this);
+        
+        mRecentsTasksLimit = (CheckBoxPreference) findPreference(RECENTS_TASKS_LIMIT);
+        mRecentsTasksLimit.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(), Settings.System.RECENTS_TASKS_LIMIT, 0) == 1);
+        mRecentsTasksLimit.setOnPreferenceChangeListener(this);
 
         int statusNavButtonsHeight = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                  Settings.System.NAV_BUTTONS_HEIGHT, 48);
@@ -83,6 +90,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.NAV_BUTTONS_HEIGHT, statusNavButtonsHeight);
             mNavButtonsHeight.setSummary(mNavButtonsHeight.getEntries()[index]);
+            return true;
+        } else if (preference == mRecentsTasksLimit) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.RECENTS_TASKS_LIMIT, (Boolean) objValue ? 1 : 0);
             return true;
         }
         return false;
