@@ -84,9 +84,5 @@
             android:title="@string/pie_control_title" />
 
     </PreferenceCategory>
-    
-    <CheckBoxPreference
-        android:key="recents_tasks_limit"
-        android:title="@string/recents_tasks_display_limit" />
 
 </PreferenceScreen>
