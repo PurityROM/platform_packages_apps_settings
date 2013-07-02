@@ -1839,8 +1839,6 @@
     <string name="wifi_setting_countrycode_title">Codice regione Wi-Fi</string>
     <string name="wifi_setting_countrycode_summary">Specifica il codice regione per il Wi-Fi</string>
     <string name="wifi_setting_countrycode_error">Problema nell\'impostazione del codice regione.</string>
-    <string name="wifi_setting_priority_title">Priorità Wi-Fi</string>
-    <string name="wifi_setting_priority_summary">Specifica la priorità delle reti Wi-Fi</string>
     <string name="volume_adjust_sounds_enable_title">Suono regolazione volume</string>
     <string name="volume_adjust_sounds_enable_summary">Riproduci un suono durante la regolazione del volume con i tasti volume</string>
     <string name="root_access">Accesso root</string>
