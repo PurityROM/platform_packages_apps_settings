@@ -4799,5 +4799,7 @@
     <string name="navring_action_google_now">Google Now</string>
     <string name="navring_choose_action_title">Choose action</string>
 
+    <string name="quick_settings_title">Quick Settings</string>
+
     <!-- **** PURITY ADDITIONS END **** -->
 </resources>
