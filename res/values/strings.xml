@@ -4805,6 +4805,9 @@
 
     <!-- Quick Settings Control Panel -->
     <string name="quick_settings_title">Quick Settings</string>
+    
+    <!-- Color Picker -->
+    <string name="dialog_indicator_color_title">Select color</string>
 
     <!-- Navigation bar extra settings -->
     <string name="navigation_button_color_title">Navigation button color</string> 
