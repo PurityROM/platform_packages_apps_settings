@@ -70,6 +70,7 @@
         <PreferenceScreen 
             android:key="navigation_control"         
             android:fragment="com.android.settings.cyanogenmod.NavControl"
+            android:icon="@drawable/ic_settings_nav_bar_glow"
             android:title="@string/navigation_controls_title" />  
 
         <PreferenceScreen
