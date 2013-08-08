@@ -4818,5 +4818,9 @@
     <!-- TRDS Settings -->
     <string name="trds_settings_title">Dark UI</string> 
 
+    <!--- Launch music on app connect -->
+  <string name="headset_category_title">Headset</string>
+  <string name="headset_connect_player_title">Launch music app on connect</string>
+
     <!-- **** PURITY ADDITIONS END **** -->
 </resources>
