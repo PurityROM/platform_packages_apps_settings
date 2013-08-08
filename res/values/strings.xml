@@ -4819,8 +4819,12 @@
     <string name="trds_settings_title">Dark UI</string> 
 
     <!--- Launch music on app connect -->
-  <string name="headset_category_title">Headset</string>
-  <string name="headset_connect_player_title">Launch music app on connect</string>
+    <string name="headset_category_title">Headset</string>
+    <string name="headset_connect_player_title">Launch music app on connect</string>
+    
+    <!-- Status bar auto unhide -->
+    <string name="status_bar_auto_unhide_title">Status bar auto unhide</string>
+    <string name="status_bar_auto_unhide_summary">Automatically unhide status bar temporarily in fullscreen on new notifications</string>
 
     <!-- **** PURITY ADDITIONS END **** -->
 </resources>
