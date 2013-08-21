@@ -55,12 +55,6 @@
             android:title="@string/status_bar_toggle_brightness"
             android:summary="@string/status_bar_toggle_brightness_summary"
             android:defaultValue="false" />
-            
-        <CheckBoxPreference
-            android:key="status_bar_auto_unhide"
-            android:title="@string/status_bar_auto_unhide_title"
-            android:summary="@string/status_bar_auto_unhide_summary"
-            android:defaultValue="false" />
 
     </PreferenceCategory>
 

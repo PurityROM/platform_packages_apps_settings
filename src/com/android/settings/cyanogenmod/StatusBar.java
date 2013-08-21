@@ -40,7 +40,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String STATUS_BAR_CLOCK = "status_bar_show_clock";
     private static final String PREF_ENABLE = "clock_style";
-    private static final String STATUS_BAR_AUTO_UNHIDE = "status_bar_auto_unhide";
 
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarCmSignal;
@@ -48,7 +47,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private PreferenceCategory mPrefCategoryGeneral;
     private ListPreference mStatusBarAmPm;
     private ListPreference mStatusBarClock;
-    private CheckBoxPreference mStatusBarAutoUnhide;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,12 +59,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarBrightnessControl = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
         mStatusBarCmSignal = (ListPreference) prefSet.findPreference(STATUS_BAR_SIGNAL);
-        mStatusBarAutoUnhide = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_AUTO_UNHIDE);
 
         mStatusBarBrightnessControl.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));               
-        mStatusBarAutoUnhide.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.STATUS_BAR_AUTO_UNHIDE, 0) == 1));
+                Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0) == 1));
 
         try {
             if (Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
@@ -163,11 +158,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarBrightnessControl.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, value ? 1 : 0);
-            return true;
-        } else if (preference == mStatusBarAutoUnhide) {
-            value = mStatusBarAutoUnhide.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.STATUS_BAR_AUTO_UNHIDE, value ? 1 : 0);
             return true;
         }
         return false;
