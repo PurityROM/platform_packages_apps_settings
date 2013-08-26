@@ -4903,5 +4903,8 @@
   <string name="headset_category_title">Headset</string>
   <string name="headset_connect_player_title">Launch music app on connect</string>
 
+    <!-- Color Picker -->
+    <string name="dialog_indicator_color_title">Select color</string>
+
     <!-- **** PURITY ADDITIONS END **** -->
 </resources>
