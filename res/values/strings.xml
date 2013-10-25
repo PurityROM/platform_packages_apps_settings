@@ -4918,6 +4918,11 @@
     <!-- Safe headset volume restore checkbox --> 
     <string name="safe_headset_volume_title">Safe headset volume</string> 
     <string name="safe_headset_volume_summary">Prevent loud volume levels when headset is first plugged in</string> 
+   
+    <!-- Custom Carrier Label -->
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>  
 
     <!-- **** PURITY ADDITIONS END **** -->
 </resources>
